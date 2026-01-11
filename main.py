@@ -1,3 +1,10 @@
+import signal
+import os
+
+# Трик за заобикаляне на грешката в Streamlit/Vercel
+def mock_signal(sig, handler):
+    return None
+signal.signal = mock_signal
 import flet as ft
 import datetime
 import json
